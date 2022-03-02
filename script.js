@@ -10,7 +10,7 @@ async function getAdvice() {
     const { id, advice} = data.slip
     
     adviceNumber.innerText = `Advice #${id}`
-    adviceText.innerText = advice
+    adviceText.innerText = `"${advice}"`
 }
 
 window.onload = function() {
