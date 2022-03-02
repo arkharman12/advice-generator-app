@@ -34,7 +34,7 @@ main.container {
 
 div.box {
     max-width: 550px;
-    max-height: 320px;
+    min-height: 370px;
     background-color: var(--dark-grayish-blue);
     border-radius: 20px;
 }
@@ -44,7 +44,7 @@ div.content {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 50px;
+    padding: 50px 50px 0px 50px;
     position: relative;
 }
 
@@ -57,28 +57,86 @@ p {
     
 }
 
+div.advice-text-container {
+    height: 170px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 h3 {
     font-size: 1.75rem;
     text-align: center;
-    margin-bottom: 35px;
     color: var(--light-cyan);
 }
 
-svg.divider {
-    display: relative;
+img.divider-mob {
+    display: none;
 }
 
 button {
-    background: none;
-    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 265px;
+    background-color: var(--neon-green);
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    bottom: -85px;
     cursor: pointer;
+    user-select: none;
+    outline: none;
 }
 
-img {
-    background-color: var(--neon-green);
-    padding: 20px;
-    border: none;
-    border-radius: 50px;
+button:hover {
+    box-shadow: hsla(150, 100%, 66%, 1) 0px 0px 40px;
+}
+
+@media (max-width: 590px) {
+
+    div.box {
+        max-width: 350px;
+        min-height: 370px;
+    }
+    
+    div.content {
+        padding: 30px 30px 0px 30px;
+        position: relative;
+    }
+    
+    p {
+        font-size: 12px;
+        margin-bottom: 15px;
+        
+    }
+    
+    div.advice-text-container {
+        height: 150px;
+        width: 300px;
+        margin-bottom: 50px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+
+    img.divider-mob {
+        display: block;
+    }
+
+    img.divider-desk {
+        display: none;
+    }
+    
+    button {
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        bottom: -120px;
+    }
+    
 }
